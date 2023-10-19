@@ -12,7 +12,7 @@ jobs:
 
     services:
       mysql:
-        image: mysql:5.7
+        image: mysql/mysql-server:5.7
         env:
           MYSQL_ROOT_PASSWORD: rootpassword
           MYSQL_DATABASE: testdb
@@ -20,12 +20,7 @@ jobs:
           MYSQL_PASSWORD: rootpassword
         ports:
           - 3306:3306
-        options: >-
-          --health-cmd="mysqladmin ping"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=3
-          --command="--skip-ssl"
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
     steps:
     - uses: actions/checkout@v3
