@@ -1,11 +1,11 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8cf34bb5_002D9be8_002D490b_002D9d78_002Da82aaec17d18/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;AddressTesting&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Project Location="\Users\tobiaspoulsen\RiderProjects\PersnoLib\AddressTesting" Presentation="&amp;lt;AddressTesting&amp;gt;" /&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8cf34bb5_002D9be8_002D490b_002D9d78_002Da82aaec17d18/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;AddressTesting&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="\Users\tobiaspoulsen\RiderProjects\PersnoLib\AddressTesting" Presentation="&amp;lt;AddressTesting&amp;gt;" /&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=dd7a7e01_002D2319_002D4665_002D9fc1_002D481c4a346218/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestGenerateStreet_VaryingLengths_Error" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Or&gt;&#xD;
-    &lt;ProjectFile&gt;CEAC648F-BBE6-4D76-94CF-31B474795285/f:DBIntegrationTest.cs&lt;/ProjectFile&gt;&#xD;
-    &lt;ProjectFile&gt;CEAC648F-BBE6-4D76-94CF-31B474795285/f:EndToEndFlowPostalCode.cs&lt;/ProjectFile&gt;&#xD;
-    &lt;ProjectFile&gt;CEAC648F-BBE6-4D76-94CF-31B474795285/f:AddressUnitTest.cs&lt;/ProjectFile&gt;&#xD;
-  &lt;/Or&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=dd7a7e01_002D2319_002D4665_002D9fc1_002D481c4a346218/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestGenerateStreet_VaryingLengths_Error" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Or&gt;
+    &lt;ProjectFile&gt;CEAC648F-BBE6-4D76-94CF-31B474795285/f:DBIntegrationTest.cs&lt;/ProjectFile&gt;
+    &lt;ProjectFile&gt;CEAC648F-BBE6-4D76-94CF-31B474795285/f:EndToEndFlowPostalCode.cs&lt;/ProjectFile&gt;
+    &lt;ProjectFile&gt;CEAC648F-BBE6-4D76-94CF-31B474795285/f:AddressUnitTest.cs&lt;/ProjectFile&gt;
+  &lt;/Or&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
