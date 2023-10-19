@@ -7,17 +7,15 @@ public class DbIntegrationTest
     [TestClass]
     public class PostalCodeTests
     {
-<<<<<<< HEAD
+
         private MySqlConnection connection;
-        private MySqlTransaction transaction;
+        private MySqlTransaction _transaction;
 
         private readonly string _connectionString =
             "Server=localhost;Port=3306;Database=testdb;User=root;Password=password";
-=======
+
         private MySqlConnection _connection;
-        private MySqlTransaction _transaction;
-        private readonly string _connectionString = "server=127.0.0.1;port=3306;database=addresses;user=root;password=admin";
->>>>>>> a4a9fd9ca4e53883ef56a5c86dd76c1309bb8c1a
+  
 
         [TestInitialize]
         public void Setup()
