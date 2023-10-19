@@ -11,9 +11,14 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    # Build the custom MySQL container
+    container:
+      image: docker://docker:20.10.5
+      options: -t my-custom-mysql-image .
+
     services:
       mysql:
-        image: mysql:5.7
+        image: my-custom-mysql-image
         env:
           MYSQL_ROOT_PASSWORD: rootpassword
           MYSQL_DATABASE: testdb
@@ -29,6 +34,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Build custom MySQL image
+      run: docker build -t my-custom-mysql-image .
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
@@ -40,4 +47,4 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
       env:
-        ConnectionString: "Server=localhost;Port=3306;Database=testdb;User=user;Password=rootpassword;Ssl Mode=None"
+        ConnectionString: "Server=localhost;Port=3306;Database=testdb;User=user;Password=rootpassword;SslMode=None"
