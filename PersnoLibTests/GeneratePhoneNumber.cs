@@ -14,7 +14,31 @@ namespace PhoneNumberTesting
             // ARRANGE: Here we start by creating a new validator
             _validator = new PhoneNumberValidator();
         }
+        [TestMethod]
+        public void IsValidPhoneNumber_ValidNumber_LowestSingleDigitPrefix()
+        {
+            //ARRANGE Testing the phone number that starts with the lowest acceptable single digit prefix "2"
+            var validNumberWithLowestPrefix = "212345678";
 
+            // ACT  
+            var result = _validator.IsValidPhoneNumber(validNumberWithLowestPrefix);
+
+            // ASSERT
+            Assert.IsTrue(result);
+        }
+        [TestMethod]
+        public void IsValidPhoneNumber_ValidNumber_HighestMultiDigitPrefix()
+        {
+            // ARRANGE: Testing the phone number that starts with the highest acceptable multi-digit prefix "829".
+            
+            var validNumberWithHighestPrefix = "82912345678";
+
+            // ACT: Test the phone number with the highest multi-digit prefix
+            var result = _validator.IsValidPhoneNumber(validNumberWithHighestPrefix);
+
+            // ASSERT: 
+            Assert.IsTrue(result);
+        }
         [TestMethod]
         public void IsValidPhoneNumber_ValidNumber_StartsWith31()
         {
