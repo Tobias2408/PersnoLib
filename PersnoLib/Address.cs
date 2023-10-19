@@ -87,10 +87,10 @@ public class Address
 
     public string GenerateDoor()
     {
-        string[] _prefixes = { "th", "mf", "tv" };
+        string[] prefixes = { "th", "mf", "tv" };
         int randomPreFix = _rand.Next(0, 3);
         int randomNumer = _rand.Next(0, 50);
-        return Door = _prefixes[randomPreFix] + randomNumer.ToString();
+        return Door = prefixes[randomPreFix] + randomNumer.ToString();
     }
 
     public string GetRandomPostalAndTown()

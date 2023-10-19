@@ -2,36 +2,36 @@ using MySqlConnector;
 
 namespace AddressTesting;
 
-public class DBIntegrationTest
+public class DbIntegrationTest
 {
     [TestClass]
     public class PostalCodeTests
     {
-        private MySqlConnection connection;
-        private MySqlTransaction transaction;
+        private MySqlConnection _connection;
+        private MySqlTransaction _transaction;
         private readonly string _connectionString = "server=127.0.0.1;port=3306;database=addresses;user=root;password=admin";
 
         [TestInitialize]
         public void Setup()
         {
-            connection = new MySqlConnection(_connectionString);
-            connection.Open();
-            transaction = connection.BeginTransaction(); // <-- Begin a new transaction
+            _connection = new MySqlConnection(_connectionString);
+            _connection.Open();
+            _transaction = _connection.BeginTransaction(); // <-- Begin a new transaction
         }
 
         [TestCleanup]
         public void Teardown()
         {
-            transaction.Rollback();
-            connection.Close();
+            _transaction.Rollback();
+            _connection.Close();
         }
 
         [TestMethod]
         public void TestTableCreation()
         {
-            using (var command = new MySqlCommand("SHOW TABLES LIKE 'postal_code';", connection))
+            using (var command = new MySqlCommand("SHOW TABLES LIKE 'postal_code';", _connection))
             {
-                command.Transaction = transaction;
+                command.Transaction = _transaction;
                 var result = command.ExecuteScalar();
                 Assert.IsNotNull(result);
             }
@@ -41,9 +41,9 @@ public class DBIntegrationTest
         public void TestDataInsertion()
         {
             
-            using (var command = new MySqlCommand("INSERT INTO `postal_code` (`cPostalCode`, `cTownName`) VALUES ('1799', 'København K');", connection))
+            using (var command = new MySqlCommand("INSERT INTO `postal_code` (`cPostalCode`, `cTownName`) VALUES ('1799', 'København K');", _connection))
             {
-                command.Transaction = transaction;
+                command.Transaction = _transaction;
                 int affectedRows = command.ExecuteNonQuery();
                 Assert.AreEqual(1, affectedRows);
             }
@@ -57,9 +57,9 @@ public class DBIntegrationTest
             using (var insertCommand =
                    new MySqlCommand(
                        "INSERT INTO `postal_code` (`cPostalCode`, `cTownName`) VALUES ('1301', 'København K'), ('1301', 'København K');",
-                       connection))
+                       _connection))
             {
-                insertCommand.Transaction = transaction;
+                insertCommand.Transaction = _transaction;
                 insertCommand.ExecuteNonQuery();
             }
             
@@ -68,9 +68,9 @@ public class DBIntegrationTest
         [TestMethod]
         public void TestRetrieveAllPostalCodes()
         {
-            using (var command = new MySqlCommand("SELECT * FROM `postal_code`;", connection))
+            using (var command = new MySqlCommand("SELECT * FROM `postal_code`;", _connection))
             {
-                command.Transaction = transaction;
+                command.Transaction = _transaction;
                 using (var reader = command.ExecuteReader())
                 {
                     int count = 0;
@@ -89,9 +89,9 @@ public class DBIntegrationTest
             const string targetPostalCode = "1301";
             const string targetTownName = "København K";
 
-            using (var command = new MySqlCommand($"SELECT * FROM `postal_code` WHERE `cPostalCode`='{targetPostalCode}';", connection))
+            using (var command = new MySqlCommand($"SELECT * FROM `postal_code` WHERE `cPostalCode`='{targetPostalCode}';", _connection))
             {
-                command.Transaction = transaction;
+                command.Transaction = _transaction;
                 using (var reader = command.ExecuteReader())
                 {
                     if (reader.Read())
@@ -115,9 +115,9 @@ public class DBIntegrationTest
         {
             const string nonExistentPostalCode = "9999";
 
-            using (var command = new MySqlCommand($"SELECT * FROM `postal_code` WHERE `cPostalCode`='{nonExistentPostalCode}';", connection))
+            using (var command = new MySqlCommand($"SELECT * FROM `postal_code` WHERE `cPostalCode`='{nonExistentPostalCode}';", _connection))
             {
-                command.Transaction = transaction;
+                command.Transaction = _transaction;
                 using (var reader = command.ExecuteReader())
                 {
                     if (!reader.Read())

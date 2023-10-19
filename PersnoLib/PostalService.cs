@@ -3,7 +3,7 @@ namespace PersnoLib;
 public class PostalService
 {
     private IPostalRepository _repository;
-    private Random rand = new Random();
+    private Random _rand = new Random();
     public List<string> PostalCodes { get; } = new List<string>
     {
         "12345",
@@ -27,8 +27,8 @@ public class PostalService
 
     public string GetRandomPostalAndTown()
     {
-        var randomPostal = PostalCodes[rand.Next(PostalCodes.Count)];
-        var randomTown = Towns[rand.Next(Towns.Count)];
+        var randomPostal = PostalCodes[_rand.Next(PostalCodes.Count)];
+        var randomTown = Towns[_rand.Next(Towns.Count)];
 
         return $"{randomPostal} - {randomTown}";
     }
