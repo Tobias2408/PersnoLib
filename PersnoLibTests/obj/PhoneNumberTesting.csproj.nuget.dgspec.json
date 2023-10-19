@@ -1,98 +1,40 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tobiaspoulsen/RiderProjects/PersnoLib/PersnoLibTests/PhoneNumberTesting.csproj": {}
+    "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLibTests\\PhoneNumberTesting.csproj": {}
   },
   "projects": {
-    "/Users/tobiaspoulsen/RiderProjects/PersnoLib/PersnoLib/PersnoLib.csproj": {
+    "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLibTests\\PhoneNumberTesting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tobiaspoulsen/RiderProjects/PersnoLib/PersnoLib/PersnoLib.csproj",
-        "projectName": "PersnoLib",
-        "projectPath": "/Users/tobiaspoulsen/RiderProjects/PersnoLib/PersnoLib/PersnoLib.csproj",
-        "packagesPath": "/Users/tobiaspoulsen/.nuget/packages/",
-        "outputPath": "/Users/tobiaspoulsen/RiderProjects/PersnoLib/PersnoLib/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/Users/tobiaspoulsen/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net7.0"
-        ],
-        "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
-          "dependencies": {
-            "MySqlConnector": {
-              "target": "Package",
-              "version": "[2.3.0-beta.3, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.3, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.305/RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "/Users/tobiaspoulsen/RiderProjects/PersnoLib/PersnoLibTests/PhoneNumberTesting.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/Users/tobiaspoulsen/RiderProjects/PersnoLib/PersnoLibTests/PhoneNumberTesting.csproj",
+        "projectUniqueName": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLibTests\\PhoneNumberTesting.csproj",
         "projectName": "PhoneNumberTesting",
-        "projectPath": "/Users/tobiaspoulsen/RiderProjects/PersnoLib/PersnoLibTests/PhoneNumberTesting.csproj",
-        "packagesPath": "/Users/tobiaspoulsen/.nuget/packages/",
-        "outputPath": "/Users/tobiaspoulsen/RiderProjects/PersnoLib/PersnoLibTests/obj/",
+        "projectPath": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLibTests\\PhoneNumberTesting.csproj",
+        "packagesPath": "C:\\Users\\Ytting\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLibTests\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/tobiaspoulsen/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Ytting\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/tobiaspoulsen/RiderProjects/PersnoLib/PersnoLib/PersnoLib.csproj": {
-                "projectPath": "/Users/tobiaspoulsen/RiderProjects/PersnoLib/PersnoLib/PersnoLib.csproj"
+              "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLib\\PersnoLib.csproj": {
+                "projectPath": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLib\\PersnoLib.csproj"
               }
             }
           }
@@ -140,7 +82,77 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.305/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLib\\PersnoLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLib\\PersnoLib.csproj",
+        "projectName": "PersnoLib",
+        "projectPath": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLib\\PersnoLib.csproj",
+        "packagesPath": "C:\\Users\\Ytting\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLib\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Ytting\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.3.0-beta.3, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
