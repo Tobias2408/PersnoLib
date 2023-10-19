@@ -12,13 +12,14 @@ jobs:
 
     services:
       mysql:
-        image: mysql:5.7 --disable-log-bin --default-authentication-plugin=mysql_native_password --ssl-mode=DISABLED
+        image: mysql:5.7
         env:
           MYSQL_ROOT_PASSWORD: admin123
           MYSQL_DATABASE: testdb
         ports:
           - 3306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+        command: ["mysqld", "--disable-log-bin", "--default-authentication-plugin=mysql_native_password", "--ssl-mode=DISABLED"]
 
     steps:
     - uses: actions/checkout@v2
