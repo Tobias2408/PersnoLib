@@ -8,17 +8,11 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    # Build the custom MySQL container
-    container:
-      image: docker://docker:20.10.5
-      options: -t my-custom-mysql-image .
 
     services:
       mysql:
-        image: my-custom-mysql-image
+        image: mysql:5.7
         env:
           MYSQL_ROOT_PASSWORD: rootpassword
           MYSQL_DATABASE: testdb
@@ -31,11 +25,10 @@ jobs:
           --health-interval=10s
           --health-timeout=5s
           --health-retries=3
+          --command="--skip-ssl"
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build custom MySQL image
-      run: docker build -t my-custom-mysql-image .
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
