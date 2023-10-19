@@ -9,7 +9,9 @@ public class DBIntegrationTest
     {
         private MySqlConnection connection;
         private MySqlTransaction transaction;
-        private readonly string _connectionString = "server=127.0.0.1;port=3306;database=addresses;user=root;password=admin";
+
+        private readonly string _connectionString =
+            "Server=localhost;Port=3306;Database=testdb;User=root;Password=password";
 
         [TestInitialize]
         public void Setup()
