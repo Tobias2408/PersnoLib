@@ -40,4 +40,4 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
       env:
-        ConnectionString: "Server=localhost;Port=3306;Database=testdb;User=user;Password=rootpassword;SslMode=None"
+        ConnectionString: "Server=localhost;Port=3306;Database=testdb;User=user;Password=rootpassword;Ssl Mode=None"
