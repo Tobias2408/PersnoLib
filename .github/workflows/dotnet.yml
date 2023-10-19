@@ -26,7 +26,6 @@ jobs:
           --health-interval=10s
           --health-timeout=5s
           --health-retries=3
-          --command="--default-authentication-plugin=mysql_native_password --require_secure_transport=OFF"
 
     steps:
     - uses: actions/checkout@v3
@@ -34,4 +33,11 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 7.0.x
-    -
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+      env:
+        ConnectionString: "Server=localhost;Port=3306;Database=testdb;User=user;Password=rootpassword;SslMode=None"
