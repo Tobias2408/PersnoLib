@@ -25,8 +25,8 @@ jobs:
     steps:
     - name: Set up MySQL
       run: |
-        sudo /etc/init.d/mysql start
-        mysql -e 'CREATE DATABASE ${{ env.MYSQL_DATABASE }};' -uroot -p${{ env.MYSQL_ROOT_PASSWORD }}
+        # Connect using the service name 'mysql' as the host
+        mysql -h mysql -e 'CREATE DATABASE ${{ env.MYSQL_DATABASE }};' -uroot -p${{ env.MYSQL_ROOT_PASSWORD }}
     - uses: actions/checkout@v2
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
