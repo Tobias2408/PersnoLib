@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\frede\\Source\\Repos\\PersnoLib1\\PersnoLibTests\\PhoneNumberTesting.csproj": {}
+    "C:\\Users\\frede\\Source\\Repos\\PersnoLib1\\CprTesting\\CprTesting.csproj": {}
   },
   "projects": {
-    "C:\\Users\\frede\\Source\\Repos\\PersnoLib1\\PersnoLibTests\\PhoneNumberTesting.csproj": {
+    "C:\\Users\\frede\\Source\\Repos\\PersnoLib1\\CprTesting\\CprTesting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\frede\\Source\\Repos\\PersnoLib1\\PersnoLibTests\\PhoneNumberTesting.csproj",
-        "projectName": "PhoneNumberTesting",
-        "projectPath": "C:\\Users\\frede\\Source\\Repos\\PersnoLib1\\PersnoLibTests\\PhoneNumberTesting.csproj",
+        "projectUniqueName": "C:\\Users\\frede\\Source\\Repos\\PersnoLib1\\CprTesting\\CprTesting.csproj",
+        "projectName": "CprTesting",
+        "projectPath": "C:\\Users\\frede\\Source\\Repos\\PersnoLib1\\CprTesting\\CprTesting.csproj",
         "packagesPath": "C:\\Users\\frede\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\frede\\Source\\Repos\\PersnoLib1\\PersnoLibTests\\obj\\",
+        "outputPath": "C:\\Users\\frede\\Source\\Repos\\PersnoLib1\\CprTesting\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\frede\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,7 +54,7 @@
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[17.5.0, )"
+              "version": "[17.7.1, )"
             },
             "coverlet.collector": {
               "target": "Package",

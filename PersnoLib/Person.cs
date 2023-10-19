@@ -31,7 +31,7 @@ public class Person
         return data;
 
     }
-    public string GenerateCpr()
+    public string GenerateCPR()
     {
         // First six digits (date of birth in ddMMyy format)
         string dob = DateOfBirth.ToString("ddMMyy");
