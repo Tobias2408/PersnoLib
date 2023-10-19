@@ -10,3 +10,15 @@
 /Users/tobiaspoulsen/RiderProjects/PersnoLib/PersnoLib/obj/Debug/net7.0/refint/PersnoLib.dll
 /Users/tobiaspoulsen/RiderProjects/PersnoLib/PersnoLib/obj/Debug/net7.0/PersnoLib.pdb
 /Users/tobiaspoulsen/RiderProjects/PersnoLib/PersnoLib/obj/Debug/net7.0/ref/PersnoLib.dll
+C:\Users\Ytting\Documents\GitHub\PersnoLib\PersnoLib\bin\Debug\net7.0\PersnoLib.deps.json
+C:\Users\Ytting\Documents\GitHub\PersnoLib\PersnoLib\bin\Debug\net7.0\PersnoLib.dll
+C:\Users\Ytting\Documents\GitHub\PersnoLib\PersnoLib\bin\Debug\net7.0\PersnoLib.pdb
+C:\Users\Ytting\Documents\GitHub\PersnoLib\PersnoLib\obj\Debug\net7.0\PersnoLib.csproj.AssemblyReference.cache
+C:\Users\Ytting\Documents\GitHub\PersnoLib\PersnoLib\obj\Debug\net7.0\PersnoLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ytting\Documents\GitHub\PersnoLib\PersnoLib\obj\Debug\net7.0\PersnoLib.AssemblyInfoInputs.cache
+C:\Users\Ytting\Documents\GitHub\PersnoLib\PersnoLib\obj\Debug\net7.0\PersnoLib.AssemblyInfo.cs
+C:\Users\Ytting\Documents\GitHub\PersnoLib\PersnoLib\obj\Debug\net7.0\PersnoLib.csproj.CoreCompileInputs.cache
+C:\Users\Ytting\Documents\GitHub\PersnoLib\PersnoLib\obj\Debug\net7.0\PersnoLib.dll
+C:\Users\Ytting\Documents\GitHub\PersnoLib\PersnoLib\obj\Debug\net7.0\refint\PersnoLib.dll
+C:\Users\Ytting\Documents\GitHub\PersnoLib\PersnoLib\obj\Debug\net7.0\PersnoLib.pdb
+C:\Users\Ytting\Documents\GitHub\PersnoLib\PersnoLib\obj\Debug\net7.0\ref\PersnoLib.dll

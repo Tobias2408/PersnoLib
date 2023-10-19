@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using Newtonsoft.Json;
 
+
 namespace PersnoLib;
 
 public class Person
@@ -9,7 +10,7 @@ public class Person
     public string Name { get; set; }
     public string Surname { get; set; }
     public string Gender { get; set; }
-    public string CPR { get; set; }
+    public string Cpr { get; set; }
     public DateTime DateOfBirth { get; set; } // Assuming using System;
     public Address Address { get; set; }
     public string MobilePhoneNumber { get; set; }
@@ -40,20 +41,27 @@ public class Person
         string fourDigits = new Random().Next(0, 1000).ToString("D4"); // generates a random 4-digit number
         fourDigits = fourDigits.Substring(0, 3) + lastDigit.ToString();
 
-        return CPR = dob + fourDigits;
+        return Cpr = dob + fourDigits;
     }
 
+    private readonly PhoneNumberValidator _validator = new PhoneNumberValidator();
+    private readonly Random _random = new Random();
     public string GenerateMobilePhoneNumber()
     {
-        // Given the constraints, this is a basic example. Expand as necessary.
-        string[] validStarts = { "2", "30", "31", /*... other valid combinations ...*/ "826", "827", "829" };
-        string chosenStart = validStarts[new Random().Next(validStarts.Length)];
-        int remainingLength = 8 - chosenStart.Length;
-        for (int i = 0; i < remainingLength; i++)
+        // Vælg et tilfældigt præfiks fra validator's liste.
+        string chosenPrefix = _validator.ValidPrefixes[_random.Next(_validator.ValidPrefixes.Length)];
+
+        // Generer den resterende del af nummeret, så det i alt har præcis 8 cifre.
+        StringBuilder remainingPart = new StringBuilder();
+        for (int i = 0; i < 8; i++) // Fast antal iterationer for altid at få 8 cifre
         {
-            chosenStart += new Random().Next(10).ToString();
+            remainingPart.Append(_random.Next(10)); // Tilføj et tilfældigt ciffer
         }
-       return MobilePhoneNumber = chosenStart;
+
+        // Kombiner det valgte præfiks med den genererede nummerdel.
+        string fullNumber = chosenPrefix + remainingPart.ToString();
+
+        return fullNumber; // Nu skulle dette være et gyldigt nummer ifølge din validator.
     }
     public override string ToString()
     {
@@ -62,7 +70,7 @@ public class Person
         sb.AppendLine($"First Name: {Name}");
         sb.AppendLine($"Last Name: {Surname}");
         sb.AppendLine($"Gender: {Gender}");
-        sb.AppendLine($"CPR: {CPR}");
+        sb.AppendLine($"CPR: {Cpr}");
         sb.AppendLine($"Date of Birth: {DateOfBirth.ToString("yyyy-MM-dd")}");
         sb.AppendLine($"Address: {Address}");
         sb.AppendLine($"Mobile Phone Number: {MobilePhoneNumber}");
