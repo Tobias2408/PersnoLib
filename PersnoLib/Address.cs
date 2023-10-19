@@ -6,8 +6,7 @@ namespace PersnoLib;
 
 public class Address
 {
-    private string _connectionString = "server=127.0.0.1;port=3306;database=addresses;user=root;password=your_password";
-
+    private MySqlPostalRepository _mySqlPostalRepository;
     private static Random _rand = new Random();
     public string Street { get; set; }
     public string Number { get; set; }
@@ -19,16 +18,22 @@ public class Address
     // Constructor to initialize Address
     public Address()
     {
+        _mySqlPostalRepository = new MySqlPostalRepository();
         // These methods need to be developed further.
-        GenerateStreet();
-        GenerateNumber();
-        GenerateFloor();
-        GenerateDoor();
-        GetRandomPostalAndTown();
+        //GenerateStreet();
+        //GenerateNumber();
+        //GenerateFloor();
+        //GenerateDoor();
+        //GetRandomPostalAndTown();
     }
 
     public string GenerateStreet(int length = 10)
     {
+        if (length <= 0)
+        {
+            throw new ArgumentException("Street length must be greater than 0.", nameof(length));
+        }
+
         StringBuilder streetName = new StringBuilder();
 
         for (int i = 0; i < length; i++)
@@ -50,8 +55,7 @@ public class Address
             streetName.Append(letter);
         }
 
-       return Street = streetName.ToString();
-
+        return streetName.ToString();
     }
 
     public string GenerateNumber()
@@ -72,7 +76,7 @@ public class Address
         int randomint = new Random().Next(0, 1);
         if (randomint == 0)
         {
-           return Floor = "st";
+           return Floor = "ST";
         }
         else
         {
@@ -91,20 +95,7 @@ public class Address
 
     public string GetRandomPostalAndTown()
     {
-        using (var connection = new MySqlConnection(_connectionString))
-        {
-            connection.Open();
-
-            using (var command =
-                   new MySqlCommand("SELECT `cPostalCode`, `cTownName` FROM `postal_code` ORDER BY RAND() LIMIT 1",
-                       connection))
-            {
-                using (var reader = command.ExecuteReader())
-                {
-                   return PostalCode = $"{reader.GetString("cPostalCode")} - {reader.GetString("cTownName")}";
-                }
-            }
-        }
+        return PostalCode = _mySqlPostalRepository.GetRandomPostalAndTown();
     }
     public override string ToString()
     {
@@ -117,5 +108,6 @@ public class Address
 
         return sb.ToString();
     }
-
+    
+    
 }

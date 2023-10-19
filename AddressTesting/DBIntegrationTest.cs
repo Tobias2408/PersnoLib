@@ -1,6 +1,136 @@
+using MySqlConnector;
+
 namespace AddressTesting;
 
 public class DBIntegrationTest
 {
-    
+    [TestClass]
+    public class PostalCodeTests
+    {
+        private MySqlConnection connection;
+        private MySqlTransaction transaction;
+        private readonly string _connectionString = "server=127.0.0.1;port=3306;database=addresses;user=root;password=admin";
+
+        [TestInitialize]
+        public void Setup()
+        {
+            connection = new MySqlConnection(_connectionString);
+            connection.Open();
+            transaction = connection.BeginTransaction(); // <-- Begin a new transaction
+        }
+
+        [TestCleanup]
+        public void Teardown()
+        {
+            transaction.Rollback();
+            connection.Close();
+        }
+
+        [TestMethod]
+        public void TestTableCreation()
+        {
+            using (var command = new MySqlCommand("SHOW TABLES LIKE 'postal_code';", connection))
+            {
+                command.Transaction = transaction;
+                var result = command.ExecuteScalar();
+                Assert.IsNotNull(result);
+            }
+        }
+
+        [TestMethod]
+        public void TestDataInsertion()
+        {
+            
+            using (var command = new MySqlCommand("INSERT INTO `postal_code` (`cPostalCode`, `cTownName`) VALUES ('1799', 'København K');", connection))
+            {
+                command.Transaction = transaction;
+                int affectedRows = command.ExecuteNonQuery();
+                Assert.AreEqual(1, affectedRows);
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(MySqlConnector.MySqlException))]
+        public void TestRemoveDuplicates()
+        {
+            // Insert duplicate data for testing
+            using (var insertCommand =
+                   new MySqlCommand(
+                       "INSERT INTO `postal_code` (`cPostalCode`, `cTownName`) VALUES ('1301', 'København K'), ('1301', 'København K');",
+                       connection))
+            {
+                insertCommand.Transaction = transaction;
+                insertCommand.ExecuteNonQuery();
+            }
+            
+        }
+        
+        [TestMethod]
+        public void TestRetrieveAllPostalCodes()
+        {
+            using (var command = new MySqlCommand("SELECT * FROM `postal_code`;", connection))
+            {
+                command.Transaction = transaction;
+                using (var reader = command.ExecuteReader())
+                {
+                    int count = 0;
+                    while (reader.Read())
+                    {
+                        count++;
+                    }
+                    Assert.IsTrue(count > 0, "Expected more than 0 postal codes but found none.");
+                }
+            }
+        }
+
+        [TestMethod]
+        public void TestRetrieveSpecificPostalCode()
+        {
+            const string targetPostalCode = "1301";
+            const string targetTownName = "København K";
+
+            using (var command = new MySqlCommand($"SELECT * FROM `postal_code` WHERE `cPostalCode`='{targetPostalCode}';", connection))
+            {
+                command.Transaction = transaction;
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        string retrievedPostalCode = reader.GetString("cPostalCode");
+                        string retrievedTownName = reader.GetString("cTownName");
+
+                        Assert.AreEqual(targetPostalCode, retrievedPostalCode);
+                        Assert.AreEqual(targetTownName, retrievedTownName);
+                    }
+                    else
+                    {
+                        Assert.Fail($"Postal code {targetPostalCode} not found.");
+                    }
+                }
+            }
+        }
+
+        [TestMethod]
+        public void TestRetrieveNonExistentPostalCode()
+        {
+            const string nonExistentPostalCode = "9999";
+
+            using (var command = new MySqlCommand($"SELECT * FROM `postal_code` WHERE `cPostalCode`='{nonExistentPostalCode}';", connection))
+            {
+                command.Transaction = transaction;
+                using (var reader = command.ExecuteReader())
+                {
+                    if (!reader.Read())
+                    {
+                        Assert.IsTrue(true);
+                    }
+                    else
+                    {
+                        Assert.Fail($"Unexpectedly found postal code {nonExistentPostalCode}.");
+                    }
+                }
+            }
+        }
+        
+    }
 }
