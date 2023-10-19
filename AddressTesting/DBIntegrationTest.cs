@@ -12,7 +12,7 @@ public class DbIntegrationTest
         private MySqlTransaction _transaction;
 
         private readonly string _connectionString =
-            "Server=localhost;Port=3306;Database=testdb;User=root;Password=password";
+            "Server=localhost;Port=3306;Database=testdb;User=root;Password=admin123";
 
         private MySqlConnection _connection;
   
