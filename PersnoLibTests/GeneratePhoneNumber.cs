@@ -15,7 +15,7 @@ namespace PhoneNumberTesting
             _validator = new PhoneNumberValidator();
         }
         [TestMethod]
-        public void IsValidPhoneNumber_ValidNumber_LowestSingleDigitPrefix()
+        public void IsValidPhoneNumber_LowestSingleDigitPrefix()
         {
             //ARRANGE Testing the phone number that starts with the lowest acceptable single digit prefix "2"
             var validNumberWithLowestPrefix = "212345678";
@@ -27,7 +27,7 @@ namespace PhoneNumberTesting
             Assert.IsTrue(result);
         }
         [TestMethod]
-        public void IsValidPhoneNumber_ValidNumber_HighestMultiDigitPrefix()
+        public void IsValidPhoneNumber_HighestMultiDigitPrefix()
         {
             // ARRANGE: Testing the phone number that starts with the highest acceptable multi-digit prefix "829".
             
@@ -40,7 +40,7 @@ namespace PhoneNumberTesting
             Assert.IsTrue(result);
         }
         [TestMethod]
-        public void IsValidPhoneNumber_ValidNumber_StartsWith31()
+        public void IsValidPhoneNumber_StartsWith31()
         {
             // ARRANGE: A valid phone number that starts with "31"
             var validNumber = "3123456789";
@@ -53,7 +53,7 @@ namespace PhoneNumberTesting
         }
 
         [TestMethod]
-        public void IsValidPhoneNumber_ValidNumber_StartsWith476()
+        public void IsValidPhoneNumber_StartsWith476()
         {
             // ARRANGE: A valid phone number that starts with "467"
             var validNumber = "47612345678";
@@ -182,5 +182,61 @@ namespace PhoneNumberTesting
             // ASSERT: Check the result
             Assert.IsFalse(result);
         }
+
+        //Might remove code bellow - test does not make sense/have value, since we already tested invalid prefix
+        //Might remove code bellow - test does not make sense/have value, since we already tested invalid prefix
+        //Might remove code bellow - test does not make sense/have value, since we already tested invalid prefix
+        [TestMethod]
+        public void IsValidPhoneNumber_JustBelowLowestSingleDigitPrefix()
+        {
+            // ARRANGE: Testing the phone number that starts with a prefix just below the lowest acceptable single-digit prefix, "1" in this case.
+            var numberWithBelowLowestPrefix = "1123456789";
+
+            // ACT: Test the phone number with the prefix that is just below the acceptable range
+            var result = _validator.IsValidPhoneNumber(numberWithBelowLowestPrefix);
+
+            // ASSERT: Check the result, expecting a failure as "1" is an invalid prefix.
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void IsValidPhoneNumber_JustAboveLowestSingleDigitPrefix()
+        {
+            // ARRANGE: Testing the phone number that starts with a prefix just above the lowest acceptable single-digit prefix, "3" in this case.
+            var numberWithAboveLowestPrefix = "3223456789";
+
+            // ACT: Test the phone number with the prefix that is just above the acceptable range
+            var result = _validator.IsValidPhoneNumber(numberWithAboveLowestPrefix);
+
+            // ASSERT: Check the result, expecting a failure as "3" is a invalid prefix. Unless its 30 or 31. Which is why we used 32.
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void IsValidPhoneNumber_JustBelowHighestMultiDigitPrefix()
+        {
+            // ARRANGE: Testing the phone number that starts with a prefix just below the highest acceptable multi-digit prefix, "828" in this case.
+            var numberWithBelowHighestPrefix = "8281234567";
+
+            // ACT: Test the phone number with the prefix that is just below the highest acceptable range
+            var result = _validator.IsValidPhoneNumber(numberWithBelowHighestPrefix);
+
+            // ASSERT: Check the result, expecting a failure as "828" is an invalid prefix.
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void IsValidPhoneNumber_JustAboveHighestMultiDigitPrefix()
+        {
+            // ARRANGE: Testing the phone number that starts with a prefix just above the highest acceptable multi-digit prefix, "830" in this case.
+            var numberWithAboveHighestPrefix = "8301234567";
+
+            // ACT: Test the phone number with the prefix that is just above the highest acceptable range
+            var result = _validator.IsValidPhoneNumber(numberWithAboveHighestPrefix);
+
+            // ASSERT: Check the result, expecting a failure as "830" is outside the range of valid prefixes.
+            Assert.IsFalse(result);
+        }
+
     }
 }

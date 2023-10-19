@@ -183,25 +183,32 @@
     ]
   },
   "packageFolders": {
-    "/Users/tobiaspoulsen/.nuget/packages/": {}
+    "C:\\Users\\Ytting\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/tobiaspoulsen/RiderProjects/PersnoLib/PersnoLib/PersnoLib.csproj",
+      "projectUniqueName": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLib\\PersnoLib.csproj",
       "projectName": "PersnoLib",
-      "projectPath": "/Users/tobiaspoulsen/RiderProjects/PersnoLib/PersnoLib/PersnoLib.csproj",
-      "packagesPath": "/Users/tobiaspoulsen/.nuget/packages/",
-      "outputPath": "/Users/tobiaspoulsen/RiderProjects/PersnoLib/PersnoLib/obj/",
+      "projectPath": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLib\\PersnoLib.csproj",
+      "packagesPath": "C:\\Users\\Ytting\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLib\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/tobiaspoulsen/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Ytting\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -245,7 +252,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.305/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
