@@ -18,6 +18,7 @@ jobs:
         image: mysql:5.7
         env:
           MYSQL_ROOT_PASSWORD: rootpassword
+          MYSQL_PASSWORD: rootpassword
           MYSQL_USER: user
           MYSQL_DATABASE: test_db
         ports:
