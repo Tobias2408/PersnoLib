@@ -46,6 +46,14 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "SonarQube.Net": {
+              "target": "Package",
+              "version": "[1.0.5, )"
+            },
+            "dotnet-framework-sonarscanner": {
+              "target": "Package",
+              "version": "[5.13.1, )"
             }
           },
           "imports": [

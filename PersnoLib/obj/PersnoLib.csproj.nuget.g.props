@@ -12,4 +12,7 @@
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="/Users/tobiaspoulsen/.nuget/packages/" />
   </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Pkgdotnet-framework-sonarscanner Condition=" '$(Pkgdotnet-framework-sonarscanner)' == '' ">/Users/tobiaspoulsen/.nuget/packages/dotnet-framework-sonarscanner/5.13.1</Pkgdotnet-framework-sonarscanner>
+  </PropertyGroup>
 </Project>

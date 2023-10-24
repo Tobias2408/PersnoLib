@@ -7,8 +7,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="dotnet-framework-sonarscanner" Version="5.13.1" />
       <PackageReference Include="MySqlConnector" Version="2.3.0-beta.3" />
       <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+      <PackageReference Include="SonarQube.Net" Version="1.0.5" />
     </ItemGroup>
 
 </Project>
