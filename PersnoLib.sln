@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddressTesting", "AddressTe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneNumberTesting", "PersnoLibTests\PhoneNumberTesting.csproj", "{1FCD14AB-169D-4FCC-A22E-6EDB5692B1C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CprTesting", "CprTesting\CprTesting.csproj", "{21E6B344-2773-467C-A2CF-33084CADA65A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CprTesting", "CprTesting\CprTesting.csproj", "{21E6B344-2773-467C-A2CF-33084CADA65A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameAndGenderTesting", "PersnoLibTests1\NameAndGenderTesting.csproj", "{919ADBE1-BA59-4858-A004-C9B47BCAB76D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{21E6B344-2773-467C-A2CF-33084CADA65A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21E6B344-2773-467C-A2CF-33084CADA65A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21E6B344-2773-467C-A2CF-33084CADA65A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{919ADBE1-BA59-4858-A004-C9B47BCAB76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{919ADBE1-BA59-4858-A004-C9B47BCAB76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{919ADBE1-BA59-4858-A004-C9B47BCAB76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{919ADBE1-BA59-4858-A004-C9B47BCAB76D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

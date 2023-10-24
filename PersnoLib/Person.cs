@@ -1,6 +1,6 @@
 ﻿using System.Text;
 using Newtonsoft.Json;
-
+using Newtonsoft.Json.Linq;
 
 namespace PersnoLib;
 
@@ -16,19 +16,20 @@ public class Person
     public string MobilePhoneNumber { get; set; }
     
     
-     public string[] ExtractNameFromJson(string filePath)
+     public void ExtractNameAndGenderFromJson(string filePath)
     {
         // Read the file and extract names and genders.
-        // This is a basic example; you might need to adjust based on the .json file structure.
-        var jsonData = File.ReadAllText(filePath);
-        dynamic jsonObject = JsonConvert.DeserializeObject(jsonData);
+        string json = File.ReadAllText(filePath);
+        JObject names = JObject.Parse(json);
+        JArray persons = (JArray)names["persons"];
 
-        Name = jsonObject.Name;
-        Surname = jsonObject.Surname;
-        Gender = jsonObject.Gender;
+        Random rand = new Random();
+        int randomIndex = rand.Next(0, persons.Count);
+        JObject person = (JObject)persons[randomIndex];
 
-        string[] data = new[] { Name, Surname, Gender };
-        return data;
+        Name = (string)person["name"];
+        Surname = (string)person["surname"];
+        Gender = (string)person["gender"];
 
     }
     public string GenerateCPR()
