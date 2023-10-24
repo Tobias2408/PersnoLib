@@ -5,8 +5,8 @@ namespace AddressTesting;
 [TestClass]
 public class AddressUnitTest
 {
-    private Address _addressGenerator;
-    private PostalService _postalService;
+    private Address? _addressGenerator;
+    private PostalService? _postalService;
 
     [TestInitialize]
     public void TestInitialize()

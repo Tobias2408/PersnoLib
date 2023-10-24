@@ -51,6 +51,12 @@
               "target": "Package",
               "version": "[1.0.5, )"
             },
+            "coverlet.msbuild": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "dotnet-framework-sonarscanner": {
               "target": "Package",
               "version": "[5.13.1, )"

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "5nkMjY43TGMhEZayj5JXU5Rkwi1ua8fIryCCWqVjViwjyGKTt6qii050+0zgW/vxxMRisCgkZdXesk2f6xc1Lw==",
+  "dgSpecHash": "R4i55ltCqPq+DBEeUpaVXVp1PkfCG18X9syTHo4eTIsokcT6+cBLrM3zTlblE22SVzO1SwCmYHdk4NlajC1MaQ==",
   "success": true,
   "projectFilePath": "/Users/tobiaspoulsen/RiderProjects/PersnoLib/PersnoLibTests/PhoneNumberTesting.csproj",
   "expectedPackageFiles": [
     "/Users/tobiaspoulsen/.nuget/packages/coverlet.collector/3.2.0/coverlet.collector.3.2.0.nupkg.sha512",
+    "/Users/tobiaspoulsen/.nuget/packages/coverlet.msbuild/6.0.0/coverlet.msbuild.6.0.0.nupkg.sha512",
     "/Users/tobiaspoulsen/.nuget/packages/dotnet-framework-sonarscanner/5.13.1/dotnet-framework-sonarscanner.5.13.1.nupkg.sha512",
     "/Users/tobiaspoulsen/.nuget/packages/flurl/2.8.2/flurl.2.8.2.nupkg.sha512",
     "/Users/tobiaspoulsen/.nuget/packages/flurl.http/2.4.2/flurl.http.2.4.2.nupkg.sha512",

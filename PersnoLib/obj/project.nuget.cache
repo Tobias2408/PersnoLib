@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "wGncRFmUoalcbgjeEnAWUg/QiNtSwOodRehbBXoB4pu9QSSNGNrz0wkVoqAxKCSRdml6HkOH+dIcUj3opUT01g==",
+  "dgSpecHash": "IhBIfNE4bQvydKMeUdQMpM0fE4IwuCR59U4HPMStRA5BKxSal8NDg80uO/H5OGms6Spu2d9AdgsacEKw6+pEgw==",
   "success": true,
   "projectFilePath": "/Users/tobiaspoulsen/RiderProjects/PersnoLib/PersnoLib/PersnoLib.csproj",
   "expectedPackageFiles": [
+    "/Users/tobiaspoulsen/.nuget/packages/coverlet.msbuild/6.0.0/coverlet.msbuild.6.0.0.nupkg.sha512",
     "/Users/tobiaspoulsen/.nuget/packages/dotnet-framework-sonarscanner/5.13.1/dotnet-framework-sonarscanner.5.13.1.nupkg.sha512",
     "/Users/tobiaspoulsen/.nuget/packages/flurl/2.8.2/flurl.2.8.2.nupkg.sha512",
     "/Users/tobiaspoulsen/.nuget/packages/flurl.http/2.4.2/flurl.http.2.4.2.nupkg.sha512",

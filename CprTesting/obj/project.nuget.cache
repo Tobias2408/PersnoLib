@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "gJnitgU/ztwTr/XsGB/lbqapgyZG7UCtXRl+b8jhw6MggDIuyt4CUHcJ3MN5tb4oYDwVO6KZMpom/G+KtDGAfg==",
+  "dgSpecHash": "rgOX/qHTn87Ih2yhufW9QngAiV18fKigYDqO6+6eGmLhf7bpzdFrirKsWOskECCL5ByPy3x7Iagnv0mADC+Vzw==",
   "success": true,
   "projectFilePath": "/Users/tobiaspoulsen/RiderProjects/PersnoLib/CprTesting/CprTesting.csproj",
   "expectedPackageFiles": [
     "/Users/tobiaspoulsen/.nuget/packages/coverlet.collector/3.2.0/coverlet.collector.3.2.0.nupkg.sha512",
+    "/Users/tobiaspoulsen/.nuget/packages/coverlet.msbuild/6.0.0/coverlet.msbuild.6.0.0.nupkg.sha512",
     "/Users/tobiaspoulsen/.nuget/packages/dotnet-framework-sonarscanner/5.13.1/dotnet-framework-sonarscanner.5.13.1.nupkg.sha512",
     "/Users/tobiaspoulsen/.nuget/packages/flurl/2.8.2/flurl.2.8.2.nupkg.sha512",
     "/Users/tobiaspoulsen/.nuget/packages/flurl.http/2.4.2/flurl.http.2.4.2.nupkg.sha512",
