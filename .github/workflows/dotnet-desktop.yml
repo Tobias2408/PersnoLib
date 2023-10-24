@@ -43,3 +43,8 @@ jobs:
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"Testtest" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
           dotnet build
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+      - name: List contents of .sonarqube\conf directory
+        if: failure()   # Only run this step if the previous step fails
+        run: |
+          Get-ChildItem -Path .\.sonarqube\conf -Recurse
+        shell: powershell
