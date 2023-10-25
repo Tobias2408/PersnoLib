@@ -6587,19 +6587,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\slm31\\.nuget\\packages\\": {}
+    "C:\\Users\\Ytting\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\slm31\\Source\\Repos\\PersnoLibs\\PersnoLibTests\\PhoneNumberTesting.csproj",
+      "projectUniqueName": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLibTests\\PhoneNumberTesting.csproj",
       "projectName": "PhoneNumberTesting",
-      "projectPath": "C:\\Users\\slm31\\Source\\Repos\\PersnoLibs\\PersnoLibTests\\PhoneNumberTesting.csproj",
-      "packagesPath": "C:\\Users\\slm31\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\slm31\\Source\\Repos\\PersnoLibs\\PersnoLibTests\\obj\\",
+      "projectPath": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLibTests\\PhoneNumberTesting.csproj",
+      "packagesPath": "C:\\Users\\Ytting\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLibTests\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\slm31\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ytting\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6607,14 +6612,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\slm31\\Source\\Repos\\PersnoLibs\\PersnoLib\\PersnoLib.csproj": {
-              "projectPath": "C:\\Users\\slm31\\Source\\Repos\\PersnoLibs\\PersnoLib\\PersnoLib.csproj"
+            "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLib\\PersnoLib.csproj": {
+              "projectPath": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLib\\PersnoLib.csproj"
             }
           }
         }

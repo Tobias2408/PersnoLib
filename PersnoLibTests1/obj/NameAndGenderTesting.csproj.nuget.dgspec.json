@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\slm31\\Source\\Repos\\PersnoLibs\\PersnoLibTests1\\NameAndGenderTesting.csproj": {}
+    "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLibTests1\\NameAndGenderTesting.csproj": {}
   },
   "projects": {
-    "C:\\Users\\slm31\\Source\\Repos\\PersnoLibs\\PersnoLibTests1\\NameAndGenderTesting.csproj": {
+    "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLibTests1\\NameAndGenderTesting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\slm31\\Source\\Repos\\PersnoLibs\\PersnoLibTests1\\NameAndGenderTesting.csproj",
+        "projectUniqueName": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLibTests1\\NameAndGenderTesting.csproj",
         "projectName": "NameAndGenderTesting",
-        "projectPath": "C:\\Users\\slm31\\Source\\Repos\\PersnoLibs\\PersnoLibTests1\\NameAndGenderTesting.csproj",
-        "packagesPath": "C:\\Users\\slm31\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\slm31\\Source\\Repos\\PersnoLibs\\PersnoLibTests1\\obj\\",
+        "projectPath": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLibTests1\\NameAndGenderTesting.csproj",
+        "packagesPath": "C:\\Users\\Ytting\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLibTests1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\slm31\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ytting\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\slm31\\Source\\Repos\\PersnoLibs\\PersnoLib\\PersnoLib.csproj": {
-                "projectPath": "C:\\Users\\slm31\\Source\\Repos\\PersnoLibs\\PersnoLib\\PersnoLib.csproj"
+              "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLib\\PersnoLib.csproj": {
+                "projectPath": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLib\\PersnoLib.csproj"
               }
             }
           }
@@ -81,17 +86,21 @@
         }
       }
     },
-    "C:\\Users\\slm31\\Source\\Repos\\PersnoLibs\\PersnoLib\\PersnoLib.csproj": {
+    "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLib\\PersnoLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\slm31\\Source\\Repos\\PersnoLibs\\PersnoLib\\PersnoLib.csproj",
+        "projectUniqueName": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLib\\PersnoLib.csproj",
         "projectName": "PersnoLib",
-        "projectPath": "C:\\Users\\slm31\\Source\\Repos\\PersnoLibs\\PersnoLib\\PersnoLib.csproj",
-        "packagesPath": "C:\\Users\\slm31\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\slm31\\Source\\Repos\\PersnoLibs\\PersnoLib\\obj\\",
+        "projectPath": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLib\\PersnoLib.csproj",
+        "packagesPath": "C:\\Users\\Ytting\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ytting\\Documents\\GitHub\\PersnoLib\\PersnoLib\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\slm31\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ytting\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,6 +108,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
